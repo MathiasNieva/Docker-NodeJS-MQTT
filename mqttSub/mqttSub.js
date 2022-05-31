@@ -4,12 +4,12 @@ const topic = process.env.THETOPIC
 var client  = mqtt.connect(host)
 
 client.on('connect', () => {
-  console.log('Connected');
+  console.log('Connected to host');
   client.subscribe(topic, (err) => {
-      console.log("subscribed")
-        if (!err) {
+      console.log("Subscribed to topic")
+        /*if (!err) {
         client.publish(topic, 'Hello mqtt')
-        }
+        }*/
   })
 })
 
